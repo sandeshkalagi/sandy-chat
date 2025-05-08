@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from flask_socketio import SocketIO, emit
+from flask_socketio import SocketIO, emit # type: ignore
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -15,7 +15,7 @@ def handle_message(msg):
 if __name__ == '__main__':
     socketio.run(app)
 from flask import Flask, render_template
-from flask_socketio import SocketIO
+from flask_socketio import SocketIO # type: ignore
 
 app = Flask(__name__)
 socketio = SocketIO(app, async_mode='eventlet')
